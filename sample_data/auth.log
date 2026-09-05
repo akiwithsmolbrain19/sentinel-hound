@@ -1,0 +1,12 @@
+Sep  5 09:00:01 lab sshd[101]: Accepted password for alice from 10.0.0.5 port 51234 ssh2
+Sep  5 09:01:00 lab sshd[200]: Failed password for alice from 203.0.113.45 port 40000 ssh2
+Sep  5 09:01:01 lab sshd[201]: Failed password for root from 203.0.113.45 port 40001 ssh2
+Sep  5 09:01:02 lab sshd[202]: Failed password for root from 203.0.113.45 port 40002 ssh2
+Sep  5 09:01:03 lab sshd[203]: Failed password for alice from 203.0.113.45 port 40003 ssh2
+Sep  5 09:01:04 lab sshd[204]: Failed password for admin from 203.0.113.45 port 40004 ssh2
+Sep  5 09:01:05 lab sshd[205]: Failed password for root from 203.0.113.45 port 40005 ssh2
+Sep  5 09:01:06 lab sshd[206]: Failed password for root from 203.0.113.45 port 40006 ssh2
+Sep  5 09:01:07 lab sshd[207]: Failed password for root from 203.0.113.45 port 40007 ssh2
+Sep  5 09:02:30 lab sshd[209]: Accepted password for root from 203.0.113.45 port 40099 ssh2
+Sep  5 09:03:00 lab sshd[300]: Failed password for bob from 10.0.0.8 port 50000 ssh2
+Sep  5 09:03:01 lab sshd[301]: Failed password for bob from 10.0.0.8 port 50001 ssh2

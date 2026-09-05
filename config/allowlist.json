@@ -1,0 +1,4 @@
+{
+  "_note": "Trusted IPs skipped by all rules (CI runners, uptime monitors, your own scanner).",
+  "ips": []
+}

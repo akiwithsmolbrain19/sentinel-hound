@@ -1,0 +1,8 @@
+{
+  "ssh_bruteforce_threshold": 5,
+  "ssh_success_threshold": 3,
+  "web_scanner_threshold": 15,
+  "high_404_threshold": 10,
+  "ssh_bruteforce_window_seconds": 600,
+  "ssh_success_window_seconds": 3600
+}

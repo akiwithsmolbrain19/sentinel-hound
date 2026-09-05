@@ -1,0 +1,6 @@
+{
+  "_note": "LAB-ONLY sample IOCs (RFC5737 TEST-NET + documentation IPs). Replace with your feed.",
+  "malicious_ips": ["203.0.113.45", "198.51.100.23"],
+  "malicious_domains": ["evil-example.test"],
+  "malicious_hashes": []
+}
