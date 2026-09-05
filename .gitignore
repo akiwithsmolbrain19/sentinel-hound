@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.db
+*.sqlite
+*.sqlite3
+report.json
+report.html
+sentinel.db
+.venv/
+dist/
+build/
+*.egg-info/
+.env

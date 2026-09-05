@@ -1,0 +1,2 @@
+# No third-party dependencies — Python 3.9+ stdlib only.
+# Nothing to install. Optional dev tools: sqlite3, jq.
