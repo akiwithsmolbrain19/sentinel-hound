@@ -153,27 +153,8 @@ Alert: `SSH_SUCCESS_AFTER_FAILS — Successful SSH login for 'root' from 203.0.1
 - Single-host, file-batch only — no streaming/syslog ingestion, no multi-host correlation. The `serve` UI and HTML reports have no auth — localhost only.
 - Sample IOCs are lab TEST-NET values, not a real feed.
 
-## Future Improvements
 
-- ~~Sliding time windows + allowlist~~ done (SSH rules windowed; `config/allowlist.json`)
-- ~~Minimal web UI~~ done (`serve`: localhost-only case table + status triage, no auth by design)
-- Remaining: per-rule traffic baselines
-- Syslog/HTTP ingestion + JSON log formats (journald, CloudTrail)
-- STIX/TAXII or MISP feed import; domain/URL/hash matching beyond IPs
-- Deduplication + alert suppression; email/webhook notifications
-- Minimal web UI with auth for case review
 
-## Skills Demonstrated
-
-Detection engineering, log analysis, MITRE ATT&CK mapping, IOC handling, SOC triage workflow design, defensive Python (input validation, safe parsing, no eval/exec), SQLite data modeling, CLI design, unit testing, technical writing, Linux log forensics.
-
-## Portfolio / Interview Talking Points
-
-- **30s:** "Sentinel Hound is a zero-dependency Python toolkit that turns Linux auth and web logs into ranked SOC findings with MITRE mapping, IOC matching, and a SQLite triage workflow."
-- **2min:** problem (labs collect logs, never triage) → approach (robust parsers, 6 threshold+signature rules, aggregated IOC) → hardest part (balancing FP/FN — added sliding time windows plus an allowlist after the naive count-only version produced 56 noisy findings) → verification (32 unit tests + manual run = exactly 8 findings on lab data).
-- **Deep dives:** why success-after-fails is critical (compromise indicator, T1078); regex evasion limits; why I aggregated IOC per-IP; SQLite schema choice; handling malformed lines safely.
-- **Tradeoffs:** count windows vs time windows; stdlib-only vs Elastic; file-batch vs streaming.
-- **Q&A:** "False positives?" → documented per rule + tuning + `config/allowlist.json`. "Deploy for real?" → cron/systemd timer on log copies, ship JSON to SIEM, back up SQLite, restrict DB perms, never run as root. "Limitations?" → evadable regex, no integrity checks, single-host. "Authorization?" → lab/owned systems only; sample data synthetic TEST-NET.
 
 ## Authorization boundary
 
