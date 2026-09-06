@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="402" font-family="monospace" font-size="14">
+<rect width="940" height="402" rx="8" fill="#1e1e2e"/>
+<circle cx="28" cy="22" r="6" fill="#f38ba8"/><circle cx="48" cy="22" r="6" fill="#f9e2af"/><circle cx="68" cy="22" r="6" fill="#a6e3a1"/>
+<text x="92" y="27" fill="#9399b2" font-size="13">sentinel-hound — SQLite case triage (synthetic lab data)</text>
+<text x="16" y="60" fill="#89b4fa">#1 [critical] IOC_MATCH 203.0.113.45 (open) — Traffic from known-malicious IOC</text>
+<text x="16" y="80" fill="#89b4fa">#2 [critical] IOC_MATCH 198.51.100.23 (open) — Traffic from known-malicious IOC</text>
+<text x="16" y="100" fill="#89b4fa">#3 [critical] SSH_SUCCESS_AFTER_FAILS 203.0.113.45 (open) — Successful SSH login after repeated failures (possible com</text>
+<text x="16" y="120" fill="#89b4fa">#4 [high] SSH_BRUTEFORCE 203.0.113.45 (open) — SSH brute-force / password spraying</text>
+<text x="16" y="140" fill="#89b4fa">#5 [high] WEB_EXPLOIT_PROBE 198.51.100.23 (open) — Web exploit probe (SQLi/LFI/RCE patterns)</text>
+<text x="16" y="160" fill="#89b4fa">#6 [high] WEB_EXPLOIT_PROBE 198.51.100.23 (open) — Web exploit probe (SQLi/LFI/RCE patterns)</text>
+<text x="16" y="180" fill="#89b4fa">#7 [medium] WEB_SCANNER 198.51.100.23 (open) — Web path scanning / enumeration</text>
+<text x="16" y="200" fill="#89b4fa">#8 [low] HIGH_404_RATE 198.51.100.23 (open) — High 404 rate from single source</text>
+<text x="16" y="220" fill="#89b4fa">updated</text>
+<text x="16" y="240" fill="#89b4fa">#1 [critical] IOC_MATCH 203.0.113.45 (investigating) — Traffic from known-malicious IOC</text>
+<text x="16" y="260" fill="#89b4fa">#2 [critical] IOC_MATCH 198.51.100.23 (open) — Traffic from known-malicious IOC</text>
+<text x="16" y="280" fill="#89b4fa">#3 [critical] SSH_SUCCESS_AFTER_FAILS 203.0.113.45 (open) — Successful SSH login after repeated failures (possible com</text>
+<text x="16" y="300" fill="#89b4fa">#4 [high] SSH_BRUTEFORCE 203.0.113.45 (open) — SSH brute-force / password spraying</text>
+<text x="16" y="320" fill="#89b4fa">#5 [high] WEB_EXPLOIT_PROBE 198.51.100.23 (open) — Web exploit probe (SQLi/LFI/RCE patterns)</text>
+<text x="16" y="340" fill="#89b4fa">#6 [high] WEB_EXPLOIT_PROBE 198.51.100.23 (open) — Web exploit probe (SQLi/LFI/RCE patterns)</text>
+<text x="16" y="360" fill="#89b4fa">#7 [medium] WEB_SCANNER 198.51.100.23 (open) — Web path scanning / enumeration</text>
+<text x="16" y="380" fill="#89b4fa">#8 [low] HIGH_404_RATE 198.51.100.23 (open) — High 404 rate from single source</text>
+</svg>

@@ -145,6 +145,16 @@ Alert: `SSH_SUCCESS_AFTER_FAILS — Successful SSH login for 'root' from 203.0.1
   [LOW     ] HIGH_404_RATE            198.51.100.23   20 HTTP 404s ...
 ```
 
+## Screenshots (synthetic lab data)
+
+All captures below come from the shipped synthetic samples (`sample_data/`, RFC5737 TEST-NET addresses) — reproduce with `make demo`.
+
+![Console detection — 8 findings on synthetic lab logs](docs/screenshots/console-detect.svg)
+
+![SQLite case workflow — list, triage, re-list](docs/screenshots/cases-workflow.svg)
+
+The full single-file HTML dashboard from the same run is saved at [`docs/screenshots/sample-report.html`](docs/screenshots/sample-report.html) — open it in a browser (local file only, no auth by design).
+
 ## Limitations
 
 - SSH rules use sliding time windows (defaults 600s brute-force / 3600s success-after-fails); web rules are still count-based and a busy NAT IP may over-fire. Tune per environment.
@@ -170,7 +180,7 @@ Detection engineering, log analysis, MITRE ATT&CK mapping, IOC handling, SOC tri
 ## Portfolio / Interview Talking Points
 
 - **30s:** "Sentinel Hound is a zero-dependency Python toolkit that turns Linux auth and web logs into ranked SOC findings with MITRE mapping, IOC matching, and a SQLite triage workflow."
-- **2min:** problem (labs collect logs, never triage) → approach (robust parsers, 6 threshold+signature rules, aggregated IOC) → hardest part (balancing FP/FN — added sliding time windows plus an allowlist after the naive count-only version produced 56 noisy findings) → verification (32 unit tests + manual run = exactly 8 findings on lab data).
+- **2min:** problem (labs collect logs, never triage) → approach (robust parsers, 6 threshold+signature rules, aggregated IOC) → hardest part (balancing FP/FN — added sliding time windows plus an allowlist after the naive count-only version produced 56 noisy findings) → verification (37 unit tests + manual run = exactly 8 findings on lab data).
 - **Deep dives:** why success-after-fails is critical (compromise indicator, T1078); regex evasion limits; why I aggregated IOC per-IP; SQLite schema choice; handling malformed lines safely.
 - **Tradeoffs:** count windows vs time windows; stdlib-only vs Elastic; file-batch vs streaming.
 - **Q&A:** "False positives?" → documented per rule + tuning + `config/allowlist.json`. "Deploy for real?" → cron/systemd timer on log copies, ship JSON to SIEM, back up SQLite, restrict DB perms, never run as root. "Limitations?" → evadable regex, no integrity checks, single-host. "Authorization?" → lab/owned systems only; sample data synthetic TEST-NET.

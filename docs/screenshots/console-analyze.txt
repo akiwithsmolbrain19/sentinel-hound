@@ -1,0 +1,12 @@
+[sentinel-hound] 8 finding(s)
+  [CRITICAL] IOC_MATCH                203.0.113.45    9 event(s) from blocklisted IOC 203.0.113.45 [ssh_failed, ssh_success]
+  [CRITICAL] IOC_MATCH                198.51.100.23   22 event(s) from blocklisted IOC 198.51.100.23 [http_request]
+  [CRITICAL] SSH_SUCCESS_AFTER_FAILS  203.0.113.45    Successful SSH login for 'root' from 203.0.113.45 after 8 prior failures — treat as possible comprom
+  [HIGH    ] SSH_BRUTEFORCE           203.0.113.45    8 failed SSH logins from 203.0.113.45 within 600s targeting 3 user(s): admin, alice, root
+  [HIGH    ] WEB_EXPLOIT_PROBE        198.51.100.23   Possible sqli probe from 198.51.100.23: GET /search?q=%27%20UNION%20SELECT%201--
+  [HIGH    ] WEB_EXPLOIT_PROBE        198.51.100.23   Possible lfi/path-traversal probe from 198.51.100.23: GET /../../etc/passwd
+  [MEDIUM  ] WEB_SCANNER              198.51.100.23   22 requests to 22 unique paths from 198.51.100.23 — directory/scan behavior
+  [LOW     ] HIGH_404_RATE            198.51.100.23   20 HTTP 404s from 198.51.100.23 — possible forced browsing / enumeration
+Wrote JSON: /tmp/sh-report.json
+Wrote HTML: /tmp/sh-report.html
+Stored 8 finding(s) in /tmp/sh-demo.db
